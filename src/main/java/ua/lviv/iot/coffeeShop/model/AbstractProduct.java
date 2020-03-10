@@ -1,0 +1,73 @@
+package ua.lviv.iot.coffeeShop.model;
+
+public abstract class AbstractProduct {
+
+	private VarietyOfCoffee variety;
+	private int capacity;
+	private PackingOfCoffee packing;
+
+	private String producer;
+	private String coffeeRoasting;
+
+	private double priceInUAH;
+
+	public AbstractProduct(VarietyOfCoffee variety, int capacity, PackingOfCoffee packing, String producer,
+			String coffeeRoasting, double priceInUAH) {
+		super();
+		this.variety = variety;
+		this.capacity = capacity;
+		this.packing = packing;
+		this.producer = producer;
+		this.coffeeRoasting = coffeeRoasting;
+		this.priceInUAH = priceInUAH;
+	}
+
+	public VarietyOfCoffee getVariety() {
+		return variety;
+	}
+
+	public void setVariety(VarietyOfCoffee variety) {
+		this.variety = variety;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public PackingOfCoffee getPacking() {
+		return packing;
+	}
+
+	public void setPacking(PackingOfCoffee packing) {
+		this.packing = packing;
+	}
+
+	public String getProducer() {
+		return producer;
+	}
+
+	public void setProducer(String producer) {
+		this.producer = producer;
+	}
+
+	public String getCoffeeRoasting() {
+		return coffeeRoasting;
+	}
+
+	public void setCoffeeRoasting(String coffeeRoasting) {
+		this.coffeeRoasting = coffeeRoasting;
+	}
+
+	public double getPriceInUAH() {
+		return priceInUAH;
+	}
+
+	public void setPriceInUAH(double priceInUAH) {
+		this.priceInUAH = priceInUAH;
+	}
+
+} 
