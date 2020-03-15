@@ -22,6 +22,16 @@ public abstract class AbstractProduct {
 		this.priceInUAH = priceInUAH;
 	}
 
+	public String getHeaders() {
+		return "variety," + "capacity," + "packing," + "producer," + "coffeeRoasting," + "priceInUAH";
+
+	}
+
+	public String toCSV() {
+		return getVariety() + "," + getCapacity() + "," + getPacking() + "," + getProducer() + "," + getCoffeeRoasting()
+				+ "," + getPriceInUAH();
+	}
+
 	public VarietyOfCoffee getVariety() {
 		return variety;
 	}
@@ -70,4 +80,4 @@ public abstract class AbstractProduct {
 		this.priceInUAH = priceInUAH;
 	}
 
-} 
+}
