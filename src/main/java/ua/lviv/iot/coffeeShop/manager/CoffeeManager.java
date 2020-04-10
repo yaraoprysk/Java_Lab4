@@ -44,4 +44,4 @@ public class CoffeeManager {
 		return result;
 
 	}
-} 
+}

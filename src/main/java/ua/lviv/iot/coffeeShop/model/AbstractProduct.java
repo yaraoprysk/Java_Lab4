@@ -1,6 +1,6 @@
 package ua.lviv.iot.coffeeShop.model;
 
-public abstract class AbstractProduct {
+public class AbstractProduct {
 
 	private VarietyOfCoffee variety;
 	private int capacity;
@@ -10,6 +10,8 @@ public abstract class AbstractProduct {
 	private String coffeeRoasting;
 
 	private double priceInUAH;
+	
+	private Integer id;
 
 	public AbstractProduct(VarietyOfCoffee variety, int capacity, PackingOfCoffee packing, String producer,
 			String coffeeRoasting, double priceInUAH) {
@@ -78,6 +80,14 @@ public abstract class AbstractProduct {
 
 	public void setPriceInUAH(double priceInUAH) {
 		this.priceInUAH = priceInUAH;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }
