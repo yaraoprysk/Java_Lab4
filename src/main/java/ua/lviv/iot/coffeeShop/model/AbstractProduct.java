@@ -1,7 +1,17 @@
 package ua.lviv.iot.coffeeShop.model;
 
-public abstract class AbstractProduct {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class AbstractProduct {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	
 	private VarietyOfCoffee variety;
 	private int capacity;
 	private PackingOfCoffee packing;
@@ -78,6 +88,14 @@ public abstract class AbstractProduct {
 
 	public void setPriceInUAH(double priceInUAH) {
 		this.priceInUAH = priceInUAH;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }
